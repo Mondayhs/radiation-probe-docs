@@ -2,12 +2,12 @@
 
 本站作為新人查找檔案的入口。私有 Repository 需由專案維護者授權後才能存取。
 
-!!! info "私有工程文件庫準備中"
-    [radiation-probe-engineering](https://github.com/Mondayhs/radiation-probe-engineering) 將統一收錄 ICD、測試 SOP、報告與硬體文件。**目前尚未建立完成**；待 Repository 建立並上傳文件後，授權成員即可登入閱讀。
+!!! info "私有工程文件庫已建立"
+    [radiation-probe-engineering](https://github.com/Mondayhs/radiation-probe-engineering) 已設為 **Private**，目前提供 ICD、測試 SOP、報告、硬體文件及版本紀錄的分類與範本。**正式工程文件仍待陸續補齊**，請由維護者授權團隊成員存取。
 
 | 資源 | 位置 | 存取權限 |
 |---|---|---|
-| 工程文件總庫（待啟用） | [radiation-probe-engineering](https://github.com/Mondayhs/radiation-probe-engineering) | 私有；尚待建立與上傳 |
+| 工程文件總庫 | [radiation-probe-engineering](https://github.com/Mondayhs/radiation-probe-engineering) | 私有；已建立，正式文件待補 |
 | CRP 韌體與硬體 | [compact-radiation-probe](https://github.com/Mondayhs/compact-radiation-probe) | 私有 |
 | DSRP／CRP 測試 GUI | [DSRP-CRP-GUI](https://github.com/Mondayhs/DSRP-CRP-GUI) | 私有 |
 | DSRP 歷史分析資料 | [Anasis_DSRP_Data](https://github.com/Mondayhs/Anasis_DSRP_Data) | 公開；引用前請確認版本 |
