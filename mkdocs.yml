@@ -5,6 +5,7 @@ repo_url: https://github.com/Mondayhs/radiation-probe-docs
 repo_name: Mondayhs/radiation-probe-docs
 theme:
   name: material
+  custom_dir: overrides
   language: zh-TW
   palette:
     - scheme: default
