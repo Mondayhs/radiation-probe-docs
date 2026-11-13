@@ -10,7 +10,7 @@
 
 ## 私有工程 Repository
 
-- [DSRP／CRP 工程文件庫](https://github.com/Mondayhs/radiation-probe-engineering)（預計建立為 Private；目前尚待啟用，提供 ICD、測試 SOP、報告與硬體文件索引）
+- [DSRP／CRP 工程文件庫](https://github.com/Mondayhs/radiation-probe-engineering)（Private；已建立文件分類與範本，正式 ICD、測試 SOP 及報告待補）
 
 - [CRP 韌體與硬體專案](https://github.com/Mondayhs/compact-radiation-probe)（Private，需取得權限）
 - [DSRP／CRP 測試 GUI](https://github.com/Mondayhs/DSRP-CRP-GUI)（Private，需取得權限）
