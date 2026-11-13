@@ -1,23 +1,23 @@
-# Release & Verification Status
+# 版本管理與驗證狀態
 
-!!! warning "No approved flight baseline declared by this public website"
-    The current released FSW, hardware/ICD pairing and validation status must be confirmed from the private project records. Do not infer flight readiness from a successful build or a working GUI.
+!!! warning "本站未宣告正式飛行版本"
+    目前的正式韌體、硬體／ICD 配對與驗證結論，應依團隊私有工程文件確認。成功編譯或 GUI 能顯示資料，均不代表已達飛行版本的驗證標準。
 
-| System | Revision / commit | Evidence | Status |
+| 項目 | 版本／Commit | 驗證依據 | 目前狀態 |
 |---|---|---|---|
-| CRP PCB | TBD | Board drawings and inspection | Unverified here |
-| CRP FSW | TBD | Tagged release and regression test | Unverified here |
-| CRP ICD | TBD | Approved revision | Unverified here |
-| Test GUI / parser | TBD | Reference packets and comparison | Unverified here |
-| Long-run operation | TBD | Raw logs and signed test report | Evidence pending |
-| Proton SEE tests | TBD | Test plan, logs and report | Evidence pending |
+| CRP PCB | 待補 | 板件圖面與檢查紀錄 | 本站尚未確認 |
+| CRP 韌體 | 待補 | 正式標籤與回歸測試 | 本站尚未確認 |
+| CRP ICD | 待補 | 已核准文件版本 | 本站尚未確認 |
+| 測試 GUI／Parser | 待補 | 參考封包與解析比對 | 本站尚未確認 |
+| 長時間穩定性測試 | 待補 | 原始 Log 與正式報告 | 待附證據 |
+| 質子照射 SEE 測試 | 待補 | 測試計畫、Log 與報告 | 待附證據 |
 
-## Release process recommendation
+## 建議的版本發布流程
 
-1. Freeze firmware commit and build artifacts.
-2. Identify matching PCB and ICD revisions.
-3. Capture test results under controlled conditions.
-4. Document known issues, deviations and recovery steps.
-5. Obtain engineering review before promotion to a flight baseline.
+1. 固定韌體 Commit、編譯環境及輸出檔案。
+2. 記錄對應 PCB 版本與 ICD。
+3. 以受控條件執行測試並保存原始證據。
+4. 明確列出已知問題、限制及復原程序。
+5. 經工程審查後，再宣告為核准使用的版本。
 
-Private internal release history should map each public design-evolution item to a commit and corresponding test evidence.
+對於每項 DSRP → CRP 設計改良，內部版本紀錄應能查到**修改 Commit、測試證據及驗證結果**。

@@ -1,18 +1,18 @@
-# Handover Open Items
+# 待補文件與交接事項
 
-This page tracks **documentation gaps**; it is not an authorization to operate hardware.
+這一頁紀錄交接文件的缺漏與後續工作，**不表示相關硬體操作已獲核准**。
 
-- [ ] Verify all external references and publication permissions.
-- [ ] Add the released CRP firmware tag and corresponding ICD revision.
-- [ ] Add approved SmartFusion2 toolchain and programming SOP.
-- [ ] Add electrical limits, safe wiring and recovery procedures to private documents.
-- [ ] Add version-controlled HK/SCI reference decoding samples.
-- [ ] Link approved DSRP flight anomaly evidence and CRP corrective commits.
-- [ ] Link validated ground long-run and proton-test reports.
-- [ ] Record project owners, maintainers and permission request process.
-- [ ] Establish a structured test log archive and ownership.
-- [ ] Complete technical review before labeling any instructions 'approved'.
+- [ ] 確認所有外部連結的有效性與公開授權。
+- [ ] 補上 CRP 正式韌體 Commit／Tag 及對應 ICD。
+- [ ] 補上 SmartFusion2 工具版本與正式燒錄程序。
+- [ ] 在私有文件中整理供電限制、接線及燒錄失敗復原方式。
+- [ ] 建立與 ICD 對應的 HK／SCI 參考解析資料。
+- [ ] 補上 DSRP 異常分析與 CRP 修正 Commit 的對照。
+- [ ] 補上長時間測試與質子照射測試的核准報告。
+- [ ] 指定交接網站與工程文件的維護負責人。
+- [ ] 訂定測試 Log、CSV 與報告的命名與封存規則。
+- [ ] 工程內容完成審查後，才標註為正式操作文件。
 
-## Contribution rules
+## 文件維護原則
 
-Public issues should discuss documentation and general onboarding without pasting internal code, unpublished interfaces or raw telemetry. Use the private engineering repository for internal issue triage.
+公開 Issue 僅適合討論一般教學內容及文件問題。未公開的程式碼、完整通訊介面或原始遙測資料，請改在私有工程 Repository 討論與追蹤。

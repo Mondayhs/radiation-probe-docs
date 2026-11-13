@@ -1,28 +1,28 @@
-# Test Data & Analysis
+# 測試資料分析
 
-A handover-quality test produces **replayable raw data** plus enough metadata to reproduce the parser output.
+一份完整的測試資料不應只有圖表或解析後的 CSV，還需要保留**可重新解析的原始資料**與完整版本資訊。
 
-## Recommended records
+## 建議保存的資料
 
-| Artifact | Purpose |
+| 檔案／紀錄 | 用途 |
 |---|---|
-| Raw UART / science logs | Ground truth for packet parsing |
-| Parsed CSV | Human-readable derived output |
-| Firmware commit / test GUI commit | Version-specific interpretation |
-| ICD revision | Byte layout and commands |
-| Test plan and operator notes | Conditions and expected behavior |
-| Figures and analysis script | Reproducible conclusions |
+| UART／SCI 原始 Log | 封包解析與異常追查的原始依據 |
+| 解析後 CSV | 便於檢視與繪圖 |
+| 韌體與 GUI Commit | 對應實際資料處理邏輯 |
+| ICD 版本 | 確認封包欄位與指令定義 |
+| 測試計畫及操作紀錄 | 保留測試條件與預期結果 |
+| 分析程式、圖表與報告 | 讓後續成員重現分析 |
 
-## Common checks
+## 常見檢查項目
 
-- HK continuity and mode transition events
-- SCI numbering and timestamps (watch for unchanged or stale entries)
-- RADFET physical units and calibration assumptions
-- NAND SEU classification and count validity
-- Packet integrity and correctly applied byte-order rules
+- HK 是否持續更新，以及 Mode／Reset 是否發生變化。
+- SCI 編號及時間是否合理，是否存在重複或舊資料。
+- RADFET 數值的單位、校正與換算公式。
+- NAND SEU 的類別、計數方式及資料有效性。
+- 封包完整性、CRC、欄位偏移量及 Byte Order。
 
-The source test tools are maintained in [DSRP-CRP-GUI (private)](https://github.com/Mondayhs/DSRP-CRP-GUI). Never publish unpublished radiation test logs without authorization.
+測試 GUI 程式位於[DSRP-CRP-GUI（私有）](https://github.com/Mondayhs/DSRP-CRP-GUI)。未經核准，請勿將尚未公開的照射測試紀錄放入公開網站。
 
-## RADFET temperature note
+## RADFET 溫度影響
 
-RADFET measurements may require temperature compensation. The existing handover points to a **DSRP RADFET Data Correction** document (not included here) that should be linked after publication approval and version verification.
+RADFET 量測可能受到溫度變化影響，需視研究目的與校正方法進行補償。原交接文件曾提到 **DSRP RADFET Data Correction**，其中有溫度校正相關內容；目前尚待取得並確認可引用的文件版本。

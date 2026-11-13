@@ -1,18 +1,20 @@
-# Engineering Resources
+# 工程資源與文件索引
 
-This page is the public **file locator**. Private resources require explicit access from maintainers.
+本站作為新人查找檔案的入口。私有 Repository 需由專案維護者授權後才能存取。
 
-| Resource | Link / location | Visibility |
+| 資源 | 位置 | 存取權限 |
 |---|---|---|
-| CRP firmware and hardware | [compact-radiation-probe](https://github.com/Mondayhs/compact-radiation-probe) | Private |
-| DSRP / CRP GUI tools | [DSRP-CRP-GUI](https://github.com/Mondayhs/DSRP-CRP-GUI) | Private |
-| Historic DSRP analysis | [Anasis_DSRP_Data](https://github.com/Mondayhs/Anasis_DSRP_Data) | Public; review before reusing |
-| Existing handover code | [Handover_UADL](https://github.com/Mondayhs/Handover_UADL) | Public; historical |
-| Programming demonstration | [SmartFusion2 video](https://youtu.be/LCdHjrpG3Nc) | External |
-| Hardware programming precautions | [COSPAR-1 video](https://youtube.com/shorts/jd6NB5zPXXo) | External |
-| Latest ICD | **TBD: approved private document link** | Private |
-| Wiring / electrical limits | **TBD: approved private drawing link** | Private |
-| Test reports and logs | **TBD: restricted archive index** | Private |
-| DSRP RADFET Data Correction | **TBD: approved document reference** | Confirm permissions |
+| CRP 韌體與硬體 | [compact-radiation-probe](https://github.com/Mondayhs/compact-radiation-probe) | 私有 |
+| DSRP／CRP 測試 GUI | [DSRP-CRP-GUI](https://github.com/Mondayhs/DSRP-CRP-GUI) | 私有 |
+| DSRP 歷史分析資料 | [Anasis_DSRP_Data](https://github.com/Mondayhs/Anasis_DSRP_Data) | 公開；引用前請確認版本 |
+| 既有交接程式庫 | [Handover_UADL](https://github.com/Mondayhs/Handover_UADL) | 公開；歷史資料 |
+| SmartFusion2 燒錄影片 | [教學影片](https://youtu.be/LCdHjrpG3Nc) | 外部連結 |
+| COSPAR-1 燒錄注意事項 | [教學短片](https://youtube.com/shorts/jd6NB5zPXXo) | 外部連結 |
+| 最新 CRP ICD | **待補：已核准之私有文件連結** | 私有 |
+| 接線及供電規格 | **待補：已核准之硬體圖面** | 私有 |
+| 測試報告及原始 Log | **待補：內部資料位置** | 私有 |
+| DSRP RADFET Data Correction | **待補：文件版本及公開權限** | 待確認 |
 
-**Rule:** Always link to the right *version*, not just a top-level folder. For engineering claims record document revision and firmware commit.
+## 文件管理原則
+
+同一份文件若對應不同硬體或韌體版本，應清楚標註其適用範圍。尤其 ICD、韌體及資料解析程式，**不要只放一個沒有版本資訊的資料夾連結**。

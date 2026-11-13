@@ -1,31 +1,31 @@
-# HK / SCI | Data Flow Concept
+# HK／SCI 資料流程
 
-## Housekeeping (HK)
+## Housekeeping（HK，健康狀態資料）
 
-HK provides payload health and operational state information. It is useful for monitoring, but **should not be assumed to contain the entire science record**.
+HK 用於回報酬載的運作狀態與部分量測相關資訊，適合進行系統健康狀態監控，但**不應視為完整科學量測紀錄**。
 
-## Science (SCI)
+## Science（SCI，科學量測資料）
 
-SCI records are acquired and stored separately. Retrieval behavior depends on the firmware implementation and the appropriate ICD and user-data request commands.
+SCI 紀錄由韌體建立並儲存，後續可透過對應版本 ICD 所定義的讀取指令取回。詳細資料封包格式應以目前使用的韌體與 ICD 為準。
 
-**Conceptual flow:**
+## 概念流程
 
-1. Payload acquires RADFET / NAND measurements.
-2. Firmware assembles science records and updates the storage metadata.
-3. HK provides selected status/summary fields.
-4. Approved readback commands retrieve stored science records.
-5. Parser checks the actual byte layout, CRC, counters, times and conversion formulas.
+1. RADFET 與 NAND Flash 產生量測資料。
+2. 韌體整理 SCI 紀錄，並更新對應的儲存資訊。
+3. HK 回報部分系統狀態或摘要欄位。
+4. 依核准的讀取流程取得已儲存的 SCI。
+5. 解析程式依正確欄位位置、CRC、計數、時間與換算公式處理資料。
 
-## Important diagnostic distinction
+## 重要判讀原則
 
-A new SCI record number is not by itself proof of a valid new physical measurement. A GUI graph that appears constant is not by itself proof that the payload stopped measuring.
+**SCI 編號增加，不一定代表感測器已取得有效的新量測。**
 
-To investigate, cross-check:
+同樣地，GUI 圖形長時間維持不變，也不能單憑畫面就認定酬載停止量測。應交叉確認：
 
-- raw communication logs vs. decoded data
-- timestamp and record-number progression
-- valid ADC conversion and units
-- operating mode and science sampling interval
-- firmware version and parser version
+- UART 原始 Log 與解析後的 CSV。
+- SCI 紀錄編號及時間是否持續更新。
+- ADC 換算公式、單位與數值合理性。
+- Science／Safe Mode 與實際採樣間隔。
+- 韌體、ICD 與 Parser 是否為相容版本。
 
-Avoid mixing byte orders or field offsets from different ICD revisions. Detailed packet layouts and operational command sequences stay in the private engineering documentation.
+不同版本的欄位偏移量及 Byte Order（位元組順序）不可混用。完整封包內容及操作指令請至私有工程文件查閱。

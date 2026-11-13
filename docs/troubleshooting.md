@@ -1,22 +1,22 @@
-# Troubleshooting | 常見異常
+# 異常排除與問題追查
 
-This is a diagnosis index, **not** a list of confirmed root causes for every firmware revision.
+本頁提供初步診斷方向，**不代表列出的原因已適用於所有韌體版本**。
 
-| Observation | First checks | Evidence to retain |
+| 觀察現象 | 優先檢查項目 | 應保存的證據 |
 |---|---|---|
-| HK received but SCI seems stale | Mode, sampling interval, record timestamps, NAND readback | Raw HK and SCI plus parser version |
-| RADFET values unchanged | ADC fields, voltage conversion, measurement cadence | Raw ADC values and decoded voltages |
-| Reference voltage seems implausible | ADC resolution / Vref formula and byte order | Original packet and conversion code |
-| Unexpected reset or health counter | Command-error logic and reset reason for active release | Power trace, HK, FSW revision |
-| Fixed/repeated SEU count | Readback alignment, algorithm, data validity | Raw memory/error records |
-| Readback packet mismatch | ICD byte offsets, length, CRC, numbering | Hex dump and full command/response pair |
+| HK 持續收到，但 SCI 沒更新 | Mode、採樣間隔、SCI 時間、NAND 讀回 | 原始 HK／SCI、Parser 版本 |
+| RADFET 數值完全不變 | ADC 原始欄位、電壓換算、實際量測週期 | 原始 ADC 值、換算後電壓 |
+| Reference Voltage 不合理 | ADC 解析度、Vref 公式、Byte Order | 原始封包及解析程式 |
+| 非預期 Reset 或健康計數異常 | 指令錯誤計數、重啟邏輯、適用版本 | 供電紀錄、HK、韌體 Commit |
+| SEU 計數固定或重複 | NAND 讀取位置、計數演算法與資料有效性 | 原始記憶體資料與錯誤紀錄 |
+| SCI 讀回封包解析錯誤 | ICD 欄位位置、長度、CRC、紀錄編號 | Hex Dump、命令與回應紀錄 |
 
-## Triage order
+## 建議的追查順序
 
-1. Secure raw logs and stop making assumptions from GUI plots.
-2. Note exact hardware, firmware, ICD and parser versions.
-3. Separate sensor measurement, FSW processing, transport and parser issues.
-4. Try a *documented, non-destructive* reproduction under supervision.
-5. Create a private engineering issue with evidence and link a safe public summary only when approved.
+1. 先保存原始 Log，不要只看 GUI 圖形下結論。
+2. 記錄完整的硬體、韌體、ICD 及解析程式版本。
+3. 分別確認感測器量測、韌體處理、通訊及 Parser。
+4. 在核准的測試條件下重現問題，避免使用可能破壞資料的指令。
+5. 在私有工程 Repository 建立 Issue，附上相關證據與後續處理結果。
 
-**Important:** A suspected cause is not a verified cause. Track unresolved findings under [Open Items](maintenance/open-items.md).
+**注意：推測原因不等於已確認的根本原因。** 尚未排除的問題請列入[待補事項](maintenance/open-items.md)。

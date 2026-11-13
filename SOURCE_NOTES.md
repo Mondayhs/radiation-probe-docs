@@ -1,7 +1,7 @@
-# Source and publication notes
+# 文件來源與公開注意事項
 
-This public site was drafted from the user's supplied 2-page DSRP/CRP handover material and project-level discussions. It is **not** a comprehensive audit of private firmware or test evidence.
+本站初版依據使用者提供的兩頁 DSRP／CRP 交接草稿，以及先前的工程討論整理，並非對所有私有韌體與測試報告進行完整稽核後的正式版本。
 
-Source handover mentions SmartFusion2 programming videos, the CRP firmware GitLab source, UART branch precautions, and the DSRP RADFET temperature-correction document. The GitHub resources list reflects repositories currently visible to the linked owner.
+原始交接文件提及 SmartFusion2 燒錄影片、CRP 程式庫、UART 修改時的 Branch 注意事項，以及 DSRP RADFET 溫度校正文件。GitHub 工程資源索引則依目前已知的 Repository 整理。
 
-Items marked TBD/pending are intentionally not invented. Public website content must receive team publication review before it is treated as an official laboratory handover.
+尚待確認的內容均明確標註，請勿自行推定。公開內容仍應經團隊檢查，確認適合對外分享。

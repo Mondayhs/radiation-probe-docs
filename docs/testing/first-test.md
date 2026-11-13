@@ -1,51 +1,51 @@
-# Your First CRP Test | 第一次測試
+# 第一次 CRP 測試
 
-**Goal:** With qualified supervision, confirm payload identity, communications, HK readout, SCI generation/readback, and reproducible logs.
+**目標：** 在有經驗的成員指導下，確認板件資訊、通訊、HK、SCI 產生與讀回，以及測試紀錄的可追溯性。
 
-!!! danger "Do not energize or flash hardware from this web page alone"
-    The public draft lacks the approved pinout, supply/current limits, precise equipment configuration, applicable PCB revision and signed-off test SOP. Obtain them from the responsible engineer before testing.
+!!! danger "請勿只依本站說明直接供電或燒錄"
+    本公開指南尚未包含核准的接腳配置、供電電壓／電流限制、儀器設定、適用 PCB 版本及完整測試程序。操作前必須先取得正式文件，並由負責人確認。
 
-## A. Preparation checklist
+## 一、測試前確認
 
-- [ ] Record operator, test date and board/serial revision.
-- [ ] Verify FSW commit/tag, ICD revision, GUI/parser version.
-- [ ] Obtain approved wiring, grounding, power setup and instrument list.
-- [ ] Establish an unambiguous raw-log storage location.
-- [ ] Assign an experienced tester to supervise the setup.
+- [ ] 記錄測試日期、操作人員、板件版本與序號。
+- [ ] 確認韌體 Commit／Tag、ICD 及 GUI／Parser 版本。
+- [ ] 取得核准的接線、接地、供電及量測儀器配置。
+- [ ] 確認原始 Log 的儲存位置與命名方式。
+- [ ] 由資深成員確認操作步驟。
 
-## B. Workflow overview
+## 二、測試流程概要
 
-1. **Visual inspection:** verify board and connectors against the approved drawing.
-2. **Approved power-up:** have an authorized operator apply the approved procedure.
-3. **Communication check:** confirm connection using a sanctioned non-destructive command.
-4. **HK check:** capture raw packets and inspect decoded status and time.
-5. **SCI check:** confirm that science processing produces new data and that stored records can be retrieved.
-6. **Archive:** retain original packets, decoder settings, observations and exception notes.
+1. **外觀與版本確認：** 依核准圖面檢查板件與連接器。
+2. **依正式程序供電：** 由具備資格的成員確認供電條件。
+3. **通訊確認：** 使用核准且不會造成破壞性影響的指令檢查連線。
+4. **HK 確認：** 保存原始封包，確認解析結果、狀態及時間資訊。
+5. **SCI 確認：** 驗證新科學紀錄的產生及讀回，避免把舊資料誤認為新量測。
+6. **保存資料：** 留下原始通訊、解析結果、測試設定與異常紀錄。
 
-## C. Acceptance questions
+## 三、如何判斷測試是否有效？
 
-- Are records actually new, or is the parser showing repeated/stale values?
-- Are reference-voltage and RADFET calculations physically plausible?
-- Can SCI readback be tied to the expected source record and timestamp?
-- Did a reset or mode change occur during the test?
-- Can another engineer reproduce the findings using the documented versions?
+- SCI 是新增紀錄，還是 Parser 重複顯示舊資料？
+- RADFET 與參考電壓的換算結果是否合理？
+- SCI 讀回資料的紀錄編號與時間能否對應？
+- 測試期間是否發生 Reset 或 Mode 變更？
+- 其他成員能否依相同版本與條件重現結果？
 
-## D. Minimal test log template
+## 四、測試紀錄範本
 
 ~~~text
-Test ID:
-Date / operator:
-Hardware revision / serial:
-FSW commit/tag:
-ICD revision:
-GUI/parser commit:
-Approved setup reference:
-Expected result:
-Actual HK behavior:
-Actual SCI behavior:
-Raw log location:
-Anomalies and issues:
-Reviewer:
+測試編號：
+日期／操作人員：
+硬體版本／序號：
+韌體 Commit／Tag：
+ICD 版本：
+GUI／Parser Commit：
+核准的測試配置文件：
+預期結果：
+實際 HK 表現：
+實際 SCI 表現：
+原始 Log 路徑：
+異常與待確認事項：
+審查人員：
 ~~~
 
-For interpretation and troubleshooting see [Data Analysis](data-analysis.md) and [Troubleshooting](../troubleshooting.md).
+測試後可參考[資料分析](data-analysis.md)及[異常排除](../troubleshooting.md)。

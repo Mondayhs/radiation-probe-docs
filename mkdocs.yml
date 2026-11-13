@@ -1,25 +1,25 @@
-site_name: NCU Radiation Probe Knowledge Base
-site_description: DSRP and CRP mission heritage, onboarding, and handover
+site_name: NCU 輻射探測酬載交接知識庫
+site_description: DSRP 與 CRP 新人入門、工程交接及測試指南
 site_url: https://mondayhs.github.io/radiation-probe-docs/
 repo_url: https://github.com/Mondayhs/radiation-probe-docs
-repo_name: Mondayhs/radiation-probe-docs
+repo_name: GitHub 文件原始碼
 theme:
   name: material
-  custom_dir: overrides
   language: zh-TW
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: indigo
       accent: cyan
       toggle:
         icon: material/weather-night
-        name: Dark mode
+        name: 切換為深色模式
     - scheme: slate
       primary: indigo
       accent: cyan
       toggle:
         icon: material/weather-sunny
-        name: Light mode
+        name: 切換為淺色模式
   features:
     - navigation.tabs
     - navigation.sections
@@ -39,22 +39,22 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 nav:
-  - Home: index.md
-  - Start Here:
-      - First Week: start/first-week.md
-      - Access & Privacy: start/access.md
-  - Missions:
-      - DSRP & CRP Overview: mission/overview.md
-      - DSRP → CRP Design Evolution: mission/design-evolution.md
-  - CRP System:
-      - System Tour: crp/system.md
-      - Programming & Firmware: crp/programming.md
-      - HK / SCI Data Flow: crp/data-flow.md
-  - Hands-on Testing:
-      - First CRP Test: testing/first-test.md
-      - Data Analysis: testing/data-analysis.md
-  - Troubleshooting: troubleshooting.md
-  - Engineering Resources: resources.md
-  - Maintenance:
-      - Release & Verification Status: maintenance/release-status.md
-      - Handover Open Items: maintenance/open-items.md
+  - 首頁: index.md
+  - 新人入門:
+      - 第一週上手指南: start/first-week.md
+      - 存取權限與公開原則: start/access.md
+  - 任務介紹:
+      - DSRP 與 CRP: mission/overview.md
+      - DSRP 至 CRP 的設計演進: mission/design-evolution.md
+  - CRP 系統介紹:
+      - 系統架構: crp/system.md
+      - 韌體開發與燒錄: crp/programming.md
+      - HK／SCI 資料流程: crp/data-flow.md
+  - 實作與測試:
+      - 第一次 CRP 測試: testing/first-test.md
+      - 測試資料分析: testing/data-analysis.md
+  - 異常排除: troubleshooting.md
+  - 工程資源索引: resources.md
+  - 專案維護:
+      - 版本與驗證狀態: maintenance/release-status.md
+      - 待補文件與交接事項: maintenance/open-items.md

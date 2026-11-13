@@ -1,29 +1,29 @@
-# SmartFusion2 | Firmware and Programming
+# SmartFusion2 韌體開發與燒錄
 
-This page is an **orientation guide**, not a complete programming SOP.
+本頁提供**上手導覽**，並非完整的正式燒錄操作程序。
 
-## Existing instructional materials
+## 既有教學資料
 
-- [CRP firmware repository (private)](https://github.com/Mondayhs/compact-radiation-probe)
-- [SmartFusion2 CRP programming video](https://youtu.be/LCdHjrpG3Nc)
-- [COSPAR-1 hardware programming precautions (video)](https://youtube.com/shorts/jd6NB5zPXXo)
+- [CRP 韌體專案（私有）](https://github.com/Mondayhs/compact-radiation-probe)
+- [SmartFusion2 燒錄教學影片](https://youtu.be/LCdHjrpG3Nc)
+- [COSPAR-1 CRP 硬體燒錄注意事項影片](https://youtube.com/shorts/jd6NB5zPXXo)
 
-These links were included in the handover notes. Confirm that videos and their content are approved for public linking.
+上述影片連結來自原交接文件。正式對外使用前，仍應確認影片內容及公開權限。
 
-## Revision-control rules
+## 開發與版本管理原則
 
-- Always record **board revision**, **FSW branch/commit**, **ICD revision**, and **test-script revision**.
-- Make experimental changes on a dedicated Git branch. Never overwrite the release baseline.
-- Build and flash only with the team's verified toolchain and approved board-level programming procedure.
-- Verify the active firmware by an agreed method after programming, and preserve console/HK logs.
+- 每次操作都應記錄 **PCB 版本、韌體 Branch／Commit、ICD 版本與測試程式版本**。
+- 進行實驗性修改時，請建立自己的 Git Branch，不要直接覆蓋正式基準版本。
+- 必須依團隊核准的工具版本、燒錄檔案與板件操作程序進行。
+- 燒錄後應確認實際執行的韌體版本，並保存相關 HK 或主控臺紀錄。
 
-## UART baud-rate changes
+## UART Baud Rate 修改注意事項
 
-Modifying the code alone is not sufficient: the host interface and receiving software must use compatible settings. Consult the specific FSW release and ICD before changing any communications parameter.
+變更 UART 鮑率（Baud Rate）時，不能只修改韌體，還必須確認接收端程式與通訊設定一致。請依對應版本的韌體、ICD 和整合測試結果操作。
 
-## Missing materials for a complete SOP
+## 待補正式操作資料
 
-- [ ] Approved power and cable connection diagrams
-- [ ] Exact SmartFusion2 toolchain versions and programming file selection
-- [ ] Approved build steps, image naming and checksum procedure
-- [ ] Recovery and troubleshooting procedure after a failed flash
+- [ ] 核准的供電與接線圖。
+- [ ] SmartFusion2 工具鏈版本、安裝與專案設定。
+- [ ] 編譯步驟、燒錄檔命名與檔案驗證。
+- [ ] 燒錄失敗時的處理程序。

@@ -1,20 +1,20 @@
-# Start Here | 新人第一週
+# 新人第一週上手指南
 
-目標不是第一天讀完所有文件，而是建立正確的系統概念，能識別版本，並在監督下完成一次可追溯的測試。
+交接的重點不是第一天讀完所有檔案，而是逐步建立系統概念，知道文件在哪裡，並能在有經驗的成員指導下完成一次可追溯的 CRP 測試。
 
-| 階段 | 閱讀／操作 | 完成標準 |
+| 時間 | 建議閱讀與練習 | 預期成果 |
 |---|---|---|
-| Day 1 | [Mission overview](../mission/overview.md)、[DSRP → CRP](../mission/design-evolution.md) | 說明兩個任務的關係與 CRP 改版動機 |
-| Day 2 | [CRP system](../crp/system.md) 與硬體版本確認 | 指出板件 Revision、電源與通訊介面 |
-| Day 3 | [Programming](../crp/programming.md)、核准的 ICD | 了解編譯／燒錄流程和資料格式 |
-| Day 4 | [First test](../testing/first-test.md)，由資深人員監督 | 留下 HK 與 SCI 測試紀錄，不能只看 GUI |
-| Day 5 | [Troubleshooting](../troubleshooting.md)、[release status](../maintenance/release-status.md) | 可以追溯異常到 Raw Log、Parser、FSW 或 ICD |
+| 第一天 | [任務介紹](../mission/overview.md)與[設計演進](../mission/design-evolution.md) | 能說明 DSRP 與 CRP 的關係，以及主要改版原因 |
+| 第二天 | [CRP 系統架構](../crp/system.md) | 能辨識板件版本、主要功能及通訊介面 |
+| 第三天 | [韌體與燒錄](../crp/programming.md)、對應版本的 ICD | 了解專案結構、編譯與燒錄流程 |
+| 第四天 | 在資深成員指導下閱讀[第一次測試指南](../testing/first-test.md) | 知道如何保存 HK、SCI 與原始通訊紀錄 |
+| 第五天 | [異常排除](../troubleshooting.md)與[版本狀態](../maintenance/release-status.md) | 能追查資料、程式版本及文件之間的關係 |
 
-## 第一次動手前
+## 第一次操作前，先確認
 
-- [ ] 已取得對應版本的 FSW、ICD、Board Revision 和測試工具
-- [ ] 已閱讀供電／接線核准文件，並知道誰是測試負責人
-- [ ] 已確認測試資料的儲存位置與命名規則
-- [ ] 明確知道網站只是入口，不等同可直接操作的正式 SOP
+- [ ] 已取得對應版本的韌體、ICD、硬體文件與測試程式。
+- [ ] 已確認板件版本、接線、供電及測試負責人。
+- [ ] 已知道原始 Log、解析後 CSV 與測試報告的存放位置。
+- [ ] 已閱讀正式測試程序，了解本網站並非硬體操作核准文件。
 
-**完成後**：請將遇到的文件缺漏寫入 [Open Items](../maintenance/open-items.md)，由維護者更新。
+若在學習過程中發現文件缺漏，請記錄至[交接待辦事項](../maintenance/open-items.md)，交由維護者確認。

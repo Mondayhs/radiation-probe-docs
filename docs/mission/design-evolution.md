@@ -1,46 +1,40 @@
-# DSRP → CRP | Design Evolution & Lessons Learned
+# DSRP → CRP：設計演進與改良紀錄
 
-This page preserves the chain **Observed issue → Root cause or requirement → CRP implementation → Verification evidence**.
+本章希望保存研發過程中的技術脈絡：
 
-!!! warning "Draft, not a flight-release change log"
-    The table summarizes development discussions. **Implemented does not mean verified.** Add the precise firmware commit, ICD revision, test setup, raw log and reviewer before declaring each item released.
+**原始問題或需求 → 原因分析 → CRP 改良設計 → 測試與驗證證據。**
 
-| Topic | DSRP observation / limitation | CRP improvement | Verification evidence |
+!!! warning "改版項目不等於已完成驗證"
+    下表為交接用的初步整理，部分改良尚未逐項連結到正式的 Commit 與測試報告。每個項目都應補上適用韌體版本、ICD、原始紀錄及審查結果，再標示為已驗證。
+
+| 項目 | DSRP 觀測或設計限制 | CRP 改良方向 | 仍需補充的證據 |
 |---|---|---|---|
-| RADFET long-run operation | Interruption of continuous measurements was observed | Review reset/error counters and recovery behavior | Attach approved long-run report |
-| NAND SEU anomaly | Repeated fixed error count (3456) was observed | Correct counting and verification paths | Attach before/after records |
-| SEU characterization | Limited separation of error mechanisms | Erased / programmed patterns; static / dynamic classification | Link radiation test and firmware revision |
-| SEU readback confidence | Single read can be ambiguous | Triple-read verification | Verify classification on approved test data |
-| Boot configuration | Reset recovery and stored configuration require care | Protected persistent parameters, CRC, mirrored storage | Cite FSW and boot tests |
-| CubeSat integration | Different platform interfaces | COSPAR-1 connectors, UART / RS-422 and interface handling | Confirm hardware and ICD revision |
-| Firmware robustness | Counter and health-reporting anomalies | State handling, watchdog and command management corrections | Link tested commit and log |
+| RADFET 長時間量測 | 曾發生連續量測資料中斷 | 檢查並修正錯誤計數器與重新啟動邏輯 | 長時間測試原始紀錄與報告 |
+| NAND SEU 計數 | 曾觀測到重複的固定異常計數 3456 | 修正計數與資料檢查流程 | 修改前後的原始資料 |
+| SEU 特性分析 | 錯誤類型的區分能力有限 | 區分 Erased／Programmed、Static／Dynamic | 輻射測試結果及對應韌體版本 |
+| SEU 讀取驗證 | 單次讀取不足以釐清部分讀取異常 | Triple-read（三次讀取驗證） | 分類演算法及驗證資料 |
+| 開機參數管理 | 重新啟動與儲存參數的可靠性需改善 | 加強非揮發性參數儲存、CRC 與備援機制 | 開機與重啟測試 |
+| CubeSat 平台整合 | 與原任務的介面需求不同 | 調整連接器、UART／RS-422 通訊及系統介面 | 硬體版本與正式 ICD |
+| 韌體穩定性 | 健康狀態計數與錯誤處理需改善 | 調整狀態管理、Watchdog 與指令處理 | 修正 Commit、測試 Log |
 
-## Design change record template
+## 改版紀錄應包含的欄位
 
-~~~yaml
-id: CRP-CHANGE-XXX
-symptom_or_requirement: TBD
-root_cause_status: suspected / confirmed / not applicable
-implementation:
-  repository: TBD
-  commit: TBD
-  firmware_version: TBD
-interface_impact: TBD
-verification:
-  method: TBD
-  raw_log: TBD
-  report: TBD
-  outcome: pending
-reviewer: TBD
-release_status: not approved
-~~~
+| 欄位 | 說明 |
+|---|---|
+| 改版編號 | 例如 CRP-CHANGE-001 |
+| 原始現象／需求 | 觀察到什麼問題，或新增什麼功能需求 |
+| 原因判定 | 已確認／推測中／不適用 |
+| 程式修改位置 | Repository、Branch、Commit |
+| 適用版本 | 韌體、硬體、ICD |
+| 驗證方法與結果 | 測試步驟、原始 Log、報告、結論 |
+| 目前狀態 | 待驗證／部分驗證／已驗證／已核准發布 |
 
-## Evidence still needed
+## 後續需補齊
 
-- [ ] DSRP radiation flight dataset and anomaly investigation report
-- [ ] Root cause and source-code evidence for the repeated SEU count
-- [ ] COSPAR-1 CRP firmware change-to-commit mapping
-- [ ] Long-run continuity and proton SEE test reports
-- [ ] Version-specific ICD and release approval
+- [ ] DSRP 實飛異常的原始資料及分析報告。
+- [ ] 固定 SEU 計數異常的程式碼原因與修正證據。
+- [ ] CRP 改版項目對應的 Commit 清單。
+- [ ] 長時間測試與質子照射測試結果。
+- [ ] 正式 ICD、韌體版本及發布審查紀錄。
 
-Do not use this public high-level summary as a substitute for the private engineering change log.
+這一頁提供新人理解**為什麼要改版**，詳細程式差異與未公開測試結果應保存於私有工程資料庫。
