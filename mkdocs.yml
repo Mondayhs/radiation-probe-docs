@@ -1,0 +1,59 @@
+site_name: NCU Radiation Probe Knowledge Base
+site_description: DSRP and CRP mission heritage, onboarding, and handover
+site_url: https://mondayhs.github.io/radiation-probe-docs/
+repo_url: https://github.com/Mondayhs/radiation-probe-docs
+repo_name: Mondayhs/radiation-probe-docs
+theme:
+  name: material
+  language: zh-TW
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Start Here:
+      - First Week: start/first-week.md
+      - Access & Privacy: start/access.md
+  - Missions:
+      - DSRP & CRP Overview: mission/overview.md
+      - DSRP → CRP Design Evolution: mission/design-evolution.md
+  - CRP System:
+      - System Tour: crp/system.md
+      - Programming & Firmware: crp/programming.md
+      - HK / SCI Data Flow: crp/data-flow.md
+  - Hands-on Testing:
+      - First CRP Test: testing/first-test.md
+      - Data Analysis: testing/data-analysis.md
+  - Troubleshooting: troubleshooting.md
+  - Engineering Resources: resources.md
+  - Maintenance:
+      - Release & Verification Status: maintenance/release-status.md
+      - Handover Open Items: maintenance/open-items.md
