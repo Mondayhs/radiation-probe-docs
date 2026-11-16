@@ -15,7 +15,14 @@
 - [CRP 韌體與硬體專案](https://github.com/Mondayhs/compact-radiation-probe)（Private，需取得權限）
 - [DSRP／CRP 測試 GUI](https://github.com/Mondayhs/DSRP-CRP-GUI)（Private，需取得權限）
 
-**提供私有 Repository 的連結，不代表對方自然擁有讀取權限。** 請洽專案維護者申請。
+**提供私有 Repository 的連結，不代表對方自然擁有讀取權限。**
+
+[**Request Access｜申請工程文件權限**](request-access.md){ .md-button .md-button--primary }
+
+新人可透過申請表提供 GitHub Username 與團隊辨識稱呼，經管理者確認身分後發出邀請。**申請表建立的 Issue 為公開內容，不可填寫敏感個資。**
+
+!!! warning "個人 Repository 的權限限制"
+    目前 `radiation-probe-engineering` 屬於個人帳號，因此受邀的 Collaborator 不只是閱讀者，也可寫入 Repository。請管理者審慎核准。
 
 ## 公開前檢查
 
