@@ -47,6 +47,7 @@ nav:
   - Start Here:
       - First Week: start/first-week.md
       - Access & Privacy: start/access.md
+      - Request Access: start/request-access.md
   - Missions:
       - DSRP & CRP Overview: mission/overview.md
       - DSRP → CRP Design Evolution: mission/design-evolution.md
