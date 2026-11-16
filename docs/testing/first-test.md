@@ -13,6 +13,15 @@
 - [ ] 確認原始 Log 的儲存位置與命名方式。
 - [ ] 由資深成員確認操作步驟。
 
+## Windows 測試 GUI（免安裝 Python）
+
+目前已有中、英文兩個 Windows 獨立執行版本。新人**不必另外安裝 Python**，但需先取得完整的測試套件並解壓縮；不可只複製 EXE，必須保留套件中的附屬檔案。USB-to-RS422 轉接器仍可能需要安裝專用驅動程式。
+
+經授權的成員可參閱[私有工程文件：Windows GUI 啟動與設定指南](https://github.com/Mondayhs/radiation-probe-engineering/blob/main/05-Software-Guides/CRP_GUI_WINDOWS_STANDALONE.md)，其中說明 COM Port、預期 UART 115200／8N1 設定，以及測試 Log 的儲存位置。
+
+!!! info "GUI 不等於硬體測試已通過"
+    本網站只提供新人導覽。實際供電與接線需依核准 SOP，科學量測結果仍須比對 ICD、原始封包與測試版本。
+
 ## 二、測試流程概要
 
 1. **外觀與版本確認：** 依核准圖面檢查板件與連接器。
