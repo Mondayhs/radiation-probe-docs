@@ -48,4 +48,10 @@
 
 本站只放可公開的入門教材與工程文件索引。完整韌體、電路設計、未公開測試資料及詳細介面文件，仍由具備權限的成員透過私有 GitHub Repository 存取。
 
+## 需要工程文件權限嗎？
+
+ICD、正式測試 SOP 與內部工程資料保存在 Private Repository。新進成員可先[申請存取權限](start/request-access.md)，提供 GitHub Username 與團隊內可辨識稱呼，經管理者確認後由 GitHub 發出邀請。
+
+[**Request Access｜申請工程文件權限**](start/request-access.md){ .md-button .md-button--primary }
+
 正式使用前，請先查看[版本與驗證狀態](maintenance/release-status.md)。
