@@ -1,0 +1,56 @@
+name: "Request Access | 申請內部文件權限"
+description: "申請閱讀 DSRP／CRP 私有工程文件（請勿填寫敏感個資）"
+title: "[Access Request] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## DSRP／CRP 工程文件存取申請
+        請先登入 GitHub 再填寫。**此申請會建立公開 Issue，任何人都可能看到內容。**
+        請使用團隊可以辨識的姓名縮寫、英文名或稱呼，**不要填寫學號、電話、電子郵件或其他敏感個資**。
+        正式姓名可由管理者透過既有團隊聯絡方式私下核對。
+        送出申請 **不會自動取得** 私有 Repository 權限。
+  - type: input
+    id: preferred-name
+    attributes:
+      label: "姓名／團隊辨識稱呼"
+      description: "使用能讓管理者辨識的稱呼；若需完整姓名，請另以私人管道提供。"
+      placeholder: "例如：Yi-Hsuan / 宜萱"
+    validations:
+      required: true
+  - type: input
+    id: github-username
+    attributes:
+      label: "GitHub Username"
+      description: "填寫 GitHub 個人帳號的 username（不是顯示名稱）；管理者會確認是否與申請者帳號相符。"
+      placeholder: "例如：Mondayhs"
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: "與專案的關係"
+      options:
+        - "新進團隊成員"
+        - "現有團隊成員"
+        - "指導老師／合作研究人員"
+        - "其他（需另行確認）"
+    validations:
+      required: true
+  - type: dropdown
+    id: repo
+    attributes:
+      label: "需要存取的資料"
+      options:
+        - "Engineering Documents（ICD／測試 SOP／報告）"
+        - "需要其他工程庫權限（請另行聯絡管理者）"
+    validations:
+      required: true
+  - type: checkboxes
+    id: declaration
+    attributes:
+      label: "申請確認"
+      options:
+        - label: "我了解申請內容為公開 Issue，且需經專案管理者確認及 GitHub 邀請後才會取得權限。"
+          required: true
