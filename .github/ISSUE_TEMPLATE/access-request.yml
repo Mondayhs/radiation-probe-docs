@@ -1,6 +1,8 @@
 name: "Request Access | 申請內部文件權限"
 description: "申請閱讀 DSRP／CRP 私有工程文件（請勿填寫敏感個資）"
 title: "[Access Request] "
+assignees:
+  - Mondayhs
 labels: []
 body:
   - type: markdown
